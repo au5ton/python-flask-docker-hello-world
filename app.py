@@ -12,7 +12,7 @@ cors = CORS(app)
 app.config['UPLOAD_FOLDER'] = '/tmp'
 ALLOWED_EXTENSIONS = set([''])
 
-@app.route('/fuckthisproject')
+@app.route('/fuckthisproject/')
 @cross_origin()
 def hello():
   return '''
