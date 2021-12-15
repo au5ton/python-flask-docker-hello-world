@@ -12,7 +12,7 @@ cors = CORS(app)
 app.config['UPLOAD_FOLDER'] = '/tmp'
 ALLOWED_EXTENSIONS = set([''])
 
-@app.route('/')
+@app.route('/fuckthisproject')
 @cross_origin()
 def hello():
   return '''
@@ -42,12 +42,12 @@ def hello():
   </script>
   '''
 
-@app.route('/uploads/<filename>')
+@app.route('/fuckthisproject/uploads/<filename>')
 @cross_origin()
 def uploaded_file(filename):
   return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
-@app.route('/dbscan', methods=['POST'])
+@app.route('/fuckthisproject/dbscan', methods=['POST'])
 @cross_origin()
 def upload_file():
   print(request.files)
